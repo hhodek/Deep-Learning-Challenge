@@ -1,0 +1,37 @@
+Overview of the Analysis
+---------------------------
+The purpose of this analysis is to build a deep learning model to predict whether applicants for charitable donations from Alphabet Soup will be successful. We aim to preprocess the data, compile, train, and evaluate a neural network model to achieve a high level of accuracy in predicting the success of these applicants. The dataset contains various features related to the applicants and their applications, such as application type, affiliation, classification, income amount, and more.
+
+
+Results:
+---------------------------
+* Data Preprocessing
+    - Target Variable: The target variable for our model is IS_SUCCESSFUL, which indicates whether an application was successful (1) or not (0).
+    - Features: The features for our model include all columns in the dataset except for IS_SUCCESSFUL, which is the target variable.
+    - Variables Removed: We removed the EIN (Employer Identification Number) and NAME columns as they are non-beneficial for our analysis.
+        Compiling, Training, and Evaluating the Model
+
+
+* Neural Network Configuration:
+    - We configured a neural network with the following layers:
+        - First Hidden Layer: 80 neurons, ReLU activation function, input dimension based on the number of features.
+        - Second Hidden Layer: 30 neurons, ReLU activation function.
+        - Output Layer: 1 neuron with a sigmoid activation function to produce binary classification results.
+    - We used the Adam optimizer and binary cross-entropy loss function.
+
+
+Model Performance:
+----------------------------
+After training the model for 100 epochs, we achieved the following performance on the test data:
+Loss: 0.565
+Accuracy: 0.729
+
+
+Summary
+----------------------------
+In summary, we have built a deep learning model that achieves moderate accuracy in predicting the success of charitable donation applications. To further improve performance, we recommend the following:
+
+Continue experimenting with the neural network architecture by adjusting the number of neurons and hidden layers.
+Explore different activation functions, such as Leaky ReLU or tanh, to see if they enhance model performance.
+Investigate the data for any remaining outliers and consider additional preprocessing steps, if necessary.
+Collect more data if possible, as a larger dataset may lead to better model performance.
